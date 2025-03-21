@@ -32,6 +32,11 @@ export default defineConfig({
         chunkFileNames: 'assets/[name].js',
         assetFileNames: 'assets/[name].[ext]'
       }
-    }
+    },
+    assetsDir: 'assets',
+    // 确保生成正确的资源引用
+    assetsInlineLimit: 0,
+    // 确保正确处理静态资源
+    manifest: true
   }
 });
